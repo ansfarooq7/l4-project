@@ -70,3 +70,15 @@
 
 * *0.5 hours* Meeting with supervisor
 * *1 hour* Created GitHub repository and uploaded dissertation and project template from moodle
+
+### 29 Oct 2021
+* *0.5 hours* Created prototypes directory on GitHub and saved first prototype directly from Colab to GitHub
+
+## Week 7
+
+### 2 Nov 2021
+* *5 hours* Used Python library to find rhyming words and wikipedia library to feed topic summary into GPT-2 before text generation
+
+### 3 Nov 2021
+
+* *0.5 hours* Meeting with supervisor

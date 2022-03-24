@@ -43,3 +43,17 @@
 * Instead of giving the same wikipedia summary of the given topic as a prompt for generating each line, only give it as a prompt for the first line and then use wiki summary and the lines generated so far as the prompt for the following lines.
 * Use another language model (GPT-J?) to get some information about the given topic to use as a prompt instead of the wikipedia summaries. Then run a user study comparing these two methods.
 * Use HuggingFace Spaces
+
+## 08/03/2022 - Fourth & Final Prototype - _L4_Project_fourth_final.ipynb_
+
+### Current state
+* The fourth and final prototype goes back to using a text generation pipeline from HuggingFace transformers with a pre-trained GPT-2 model. This is in conjunction with a pre-trained Roberta model.
+* Further, instead of generate each new line with GPT-2 using the same Wikipedia summary of the given topic, it only uses it as a prompt for the first line. For each subsequent line, it takes the previous line's prompt plus the generated line and uses that as a prompt for the next line to generate.
+* Uses 2 different methods of generating limericks, with information about the given topic being taken from either Wikipedia or predicted from GPT-2.
+* The fourth and final prototype is hosted on HuggingFace Spaces as a Gradio app at: https://huggingface.co/spaces/ansfarooq7/l4-project
+
+### Future improvements
+* Fine-tune the language models on poetry
+* Improve coherency of English
+* Choose just one of the two methods
+* Remove strict limitations on number of words generated from each language model, allow the models more freedom, generate more words, more free-flowing.

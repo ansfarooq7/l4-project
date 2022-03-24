@@ -1,41 +1,48 @@
 # Readme
 
-Put a brief description of your code here. This should at least describe the file structure.
+The code is all contained within a single IPython Notebook (Jupyter Notebook) named `l4_project.ipynb` which was created and worked on over time in Google Colab.
+
+The first **Imports** section of the notebook contains all the `pip install` and `import` statements for the Python packages required by the code. It also initialises the pre-trained RoBERTa and GPT-2 models and a text-generation pipeline from HuggingFace Transformers.
+
+The second **Helper functions** section of the notebook contains helper functions used later in the code to perform tasks such as filtering out rare words with poor/no rhymes, removing punctuation from text and getting rhymes for a given word.
+
+The third **RoBERTa** section of the notebook contains the function used to fill in the blank words in lines using the RoBERTa model from HuggingFace Transformers.
+
+The fourth **GPT-2 + RoBERTa** section of the notebook contains the fuctions used to generate each line of the limerick, using both the GPT-2 and RoBERTa models.
+
+The fifth **Limerick generation** section of the notebook contains the main logic of the code, handled by the `generate()` and `compare_summaries()` functions.
 
 ## Build instructions
 
-**You must** include the instructions necessary to build and deploy this project successfully. If appropriate, also include 
-instructions to run automated tests. 
-
 ### Requirements
 
-List the all of the pre-requisites software required to set up your project (e.g. compilers, packages, libraries, OS, hardware)
-
-For example:
-
-* Python 3.7
-* Packages: listed in `requirements.txt` 
-* Tested on Windows 10
-
-or another example:
-
-* Requires Raspberry Pi 3 
-* a Linux host machine with the `arm-none-eabi` toolchain (at least version `x.xx`) installed
-* a working LuaJIT installation > 2.1.0
+* Jupyter Notebook or Google Colab (or test on Gradio app hosted on HuggingFace Spaces)
+* Packages: listed in `requirements.txt`
+    * transformers 4.17.0
+    * torch 1.10.0
+    * wikipedia 1.4.0
+    * nltk 3.2.5
+    * gradio 2.8.13
+* wordFrequency.txt
 
 ### Build steps
 
-List the steps required to build software. 
+#### Google Colab
+* Open the notebook at: https://colab.research.google.com/drive/1FnzTROJ72EbgV73zbhaXrVcX9wT7CY4N?usp=sharing
+* Copy to your own drive
+* Upload `wordFrequency.txt` from the `\src` folder
+* Run all the cells in order
 
-Hopefully something simple like `pip install -e .` or `make` or `cd build; cmake ..`. In
-some cases you may have much more involved setup required.
+#### Jupyter Notebook
+* Open `l4_project.ipynb` in the `\src` folder#
+* Ensure `wordFrequency.txt` is in the same folder as `l4_project.ipynb`
+* Run all the cells in order
+
+#### HuggingFace Spaces
+* Go to: https://huggingface.co/spaces/ansfarooq7/l4-project
+* Enter a topic when prompted in the Gradio app and wait for the limericks to be generated
 
 ### Test steps
 
-List steps needed to show your software works. This might be running a test suite, or just starting the program; but something that could be used to verify your code is working correctly.
-
-Examples:
-
-* Run automated tests by running `pytest`
-* Start the software by running `bin/editor.exe` and opening the file `examples/example_01.bin`
-
+* Run all the cells in order
+* Enter a topic when prompted in the Gradio app and wait for the limericks to be generated

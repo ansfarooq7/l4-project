@@ -12,7 +12,7 @@ Recent advances in natural language processing (NLP) have shown incredible promi
 ## Overview of Structure
 
 * `timelog.md` The time log for the project.
-* `plan.md` A skeleton week-by-week plan for the project. 
+* `plan.md` A week-by-week plan for the project. 
 * `data/` data acquired during the project
 * `src/` source code for the project, contains the `.pynb` file
 * `prototypes/` prototypes developed during the project
